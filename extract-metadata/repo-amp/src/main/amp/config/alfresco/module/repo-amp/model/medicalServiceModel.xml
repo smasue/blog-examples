@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Medical service model -->
+<model name="ms:medicalService" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+  <!-- Optional meta-data about the model -->
+  <description>Medical service Content Model</description>
+  <author>Sam</author>
+  <version>1.0</version>
+
+  <!-- Imports are required to allow references to definitions in other models -->
+  <imports>
+    <!-- Import Alfresco Dictionary Definitions -->
+    <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+    <!-- Import Alfresco Content Domain Model Definitions -->
+    <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+  </imports>
+
+  <!-- Introduction of new namespaces defined by this model -->
+  <namespaces>
+    <namespace uri="http://www.someco.ch/model/medicalservice/1.0" prefix="ms"/>
+  </namespaces>
+
+  <!--		T Y P E   D E F I N I T I O N S		-->
+
+  <types>
+    <type name="ms:content">
+      <title>medical service document</title>
+      <parent>cm:content</parent>
+      <mandatory-aspects>
+        <aspect>ms:documentType</aspect>
+        <aspect>ms:person</aspect>
+        <aspect>ms:effectiveDate</aspect>
+      </mandatory-aspects>
+    </type>
+  </types>
+
+  <!--		A S P E C T    D E F I N I T I O N S		-->
+
+  <aspects>
+    <!-- ************************************************************************ -->
+    <!-- Person aspect -->
+    <!-- ************************************************************************ -->
+    <aspect name="ms:person">
+      <title>Patient</title>
+      <properties>
+        <!-- The Person ID of the related person -->
+        <property name="ms:personId">
+          <type>d:long</type>
+          <mandatory>true</mandatory>
+        </property>
+        <property name="ms:firstName">
+          <type>d:text</type>
+        </property>
+        <property name="ms:lastName">
+          <type>d:text</type>
+        </property>
+        <property name="ms:personStatus">
+          <type>d:text</type>
+        </property>
+        <property name="ms:orgUnit">
+          <type>d:text</type>
+        </property>
+      </properties>
+    </aspect>
+
+    <!-- ************************************************************************ -->
+    <!-- Effective date aspect. Effective date of the document -->
+    <!-- ************************************************************************ -->
+    <aspect name="ms:effectiveDate">
+      <title>Effective date</title>
+      <properties>
+        <property name="ms:date">
+          <type>d:date</type>
+          <mandatory>true</mandatory>
+        </property>
+      </properties>
+    </aspect>
+
+    <!-- ************************************************************************ -->
+    <!-- The type of the document. E.g certificate, prescription, ... -->
+    <!-- ************************************************************************ -->
+    <aspect name="ms:documentType">
+      <title>Type</title>
+      <properties>
+        <property name="ms:typeCode">
+          <type>d:text</type>
+          <mandatory>true</mandatory>
+        </property>
+        <property name="ms:typeName">
+          <type>d:text</type>
+          <mandatory>true</mandatory>
+        </property>
+        <property name="ms:typeDescription">
+          <type>d:text</type>
+        </property>
+      </properties>
+    </aspect>
+  </aspects>
+</model>

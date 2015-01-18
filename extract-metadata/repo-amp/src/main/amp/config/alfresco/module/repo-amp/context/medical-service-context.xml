@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+
+  <!-- A simple class that is initialized by Spring -->
+  <bean id="changeMe.exampleBean" class="org.alfresco.demoamp.Demo" init-method="init" />
+
+  <!-- A simple module component that will be executed once -->
+  <bean id="changeMe.exampleComponent" class="org.alfresco.demoamp.DemoComponent" parent="module.baseComponent" >
+    <property name="moduleId" value="${project.artifactId}" />  <!-- See module.properties -->
+    <property name="name" value="exampleComponent" />
+    <property name="description" value="A demonstration component" />
+    <property name="sinceVersion" value="2.0" />
+    <property name="appliesFromVersion" value="2.0" />
+  </bean>
+
+
+  <!-- Registration of new models -->
+  <bean id="${project.artifactId}_dictionaryBootstrap" parent="dictionaryModelBootstrap"
+        depends-on="dictionaryBootstrap">
+    <property name="models">
+      <list>
+        <value>alfresco/module/${project.artifactId}/model/medicalServiceModel.xml</value>
+      </list>
+    </property>
+  </bean>
+</beans>

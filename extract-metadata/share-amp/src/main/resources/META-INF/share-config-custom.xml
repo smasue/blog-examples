@@ -1,0 +1,75 @@
+<alfresco-config>
+
+  <!-- Document Library config section : Display new aspects and new types-->
+  <config evaluator="string-compare" condition="DocumentLibrary" replace="true">
+    <aspects>
+      <!-- Aspects that a user can see -->
+      <visible>
+        <aspect name="ms:person"/>
+        <aspect name="ms:effectiveDate"/>
+        <aspect name="ms:documentType"/>
+      </visible>
+
+      <!-- Aspects that a user can add. Same as "visible" if left empty -->
+      <addable>
+      </addable>
+
+      <!-- Aspects that a user can remove. Same as "visible" if left empty -->
+      <removeable>
+      </removeable>
+    </aspects>
+
+    <types>
+      <type name="cm:content">
+        <subtype name="ms:document"/>
+      </type>
+    </types>
+
+  </config>
+
+  <!-- ################################ TYPES EXISTING NODES ######################## -->
+
+  <config evaluator="node-type" condition="ms:document">
+    <forms>
+      <form>
+        <field-visibility>
+          <!-- cm properties -->
+          <show id="cm:name" for-mode="view"/>
+          <show id="cm:title" for-mode="view"/>
+          <show id="size" for-mode="view"/>
+          <show id="cm:created" for-mode="view"/>
+          <show id="cm:creator" for-mode="view"/>
+          <!-- aspect person -->
+          <show id="ms:personId"/>
+          <show id="ms:firstName" for-mode="view"/>
+          <show id="ms:lastName" for-mode="view"/>
+          <!-- aspect effectiveDate -->
+          <show id="ms:date" for-mode="view"/>
+          <!-- aspect documentType -->
+          <show id="ms:typeCode"/>
+          <show id="ms:typeName" for-mode="view"/>
+          <show id="ms:typeDescription" for-mode="view"/>
+        </field-visibility>
+        <appearance>
+          <set id="medicalinfoset" appearance="fieldset" label-id="set.ms_medicalinfoset"/>
+          <set id="commonpropertiesset" appearance="fieldset" label-id="set.ms_commonpropertiesset"/>
+
+          <field id="ms:personId" label-id="prop.ms_personId" set="medicalinfoset"/>
+          <field id="ms:firstName" label-id="prop.ms_firstName" set="medicalinfoset"/>
+          <field id="ms:lastName" label-id="prop.ms_lastName" set="medicalinfoset"/>
+          <field id="ms:date" label-id="prop.ms_date" set="medicalinfoset"/>
+          <field id="ms:typeCode" label-id="prop.ms_typeCode" set="medicalinfoset"/>
+          <field id="ms:typeName" label-id="prop.ms_typeName" set="medicalinfoset"/>
+          <field id="ms:typeDescription" label-id="prop.ms_typeDescription" set="medicalinfoset"/>
+
+          <field id="cm:name" set="commonpropertiesset"/>
+          <field id="cm:title" set="commonpropertiesset"/>
+          <field id="size" set="commonpropertiesset"/>
+          <field id="cm:created" set="commonpropertiesset"/>
+          <field id="cm:creator" set="commonpropertiesset"/>
+        </appearance>
+      </form>
+    </forms>
+  </config>
+
+</alfresco-config>

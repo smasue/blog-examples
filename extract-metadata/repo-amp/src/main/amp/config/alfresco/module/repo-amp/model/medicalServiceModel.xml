@@ -22,7 +22,7 @@
   <!--		T Y P E   D E F I N I T I O N S		-->
 
   <types>
-    <type name="ms:content">
+    <type name="ms:document">
       <title>medical service document</title>
       <parent>cm:content</parent>
       <mandatory-aspects>

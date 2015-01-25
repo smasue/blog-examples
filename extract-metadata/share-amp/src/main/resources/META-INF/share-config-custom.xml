@@ -62,7 +62,7 @@
           <field id="ms:date" label-id="prop.ms_date" set="medicalinfoset"/>
           <field id="ms:docTypeCode" label-id="prop.ms_docTypeCode" set="medicalinfoset"/>
           <field id="ms:docTypeName" label-id="prop.ms_docTypeName" set="medicalinfoset"/>
-          <field id="ms:docTypeDescription" label-id="prop.ms_docTypeDescriptionn" set="medicalinfoset"/>
+          <field id="ms:docTypeDescription" label-id="prop.ms_docTypeDescription" set="medicalinfoset"/>
 
           <field id="cm:name" set="commonpropertiesset"/>
           <field id="cm:title" set="commonpropertiesset"/>

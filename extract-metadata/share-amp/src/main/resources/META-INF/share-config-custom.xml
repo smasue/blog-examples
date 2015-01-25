@@ -23,6 +23,8 @@
       <type name="cm:content">
         <subtype name="ms:document"/>
       </type>
+      <type name="ms:document">
+      </type>
     </types>
 
   </config>
@@ -46,9 +48,9 @@
           <!-- aspect effectiveDate -->
           <show id="ms:date" for-mode="view"/>
           <!-- aspect documentType -->
-          <show id="ms:typeCode"/>
-          <show id="ms:typeName" for-mode="view"/>
-          <show id="ms:typeDescription" for-mode="view"/>
+          <show id="ms:docTypeCode"/>
+          <show id="ms:docTypeName" for-mode="view"/>
+          <show id="ms:docTypeDescription" for-mode="view"/>
         </field-visibility>
         <appearance>
           <set id="medicalinfoset" appearance="fieldset" label-id="set.ms_medicalinfoset"/>
@@ -58,9 +60,9 @@
           <field id="ms:firstName" label-id="prop.ms_firstName" set="medicalinfoset"/>
           <field id="ms:lastName" label-id="prop.ms_lastName" set="medicalinfoset"/>
           <field id="ms:date" label-id="prop.ms_date" set="medicalinfoset"/>
-          <field id="ms:typeCode" label-id="prop.ms_typeCode" set="medicalinfoset"/>
-          <field id="ms:typeName" label-id="prop.ms_typeName" set="medicalinfoset"/>
-          <field id="ms:typeDescription" label-id="prop.ms_typeDescription" set="medicalinfoset"/>
+          <field id="ms:docTypeCode" label-id="prop.ms_docTypeCode" set="medicalinfoset"/>
+          <field id="ms:docTypeName" label-id="prop.ms_docTypeName" set="medicalinfoset"/>
+          <field id="ms:docTypeDescription" label-id="prop.ms_docTypeDescriptionn" set="medicalinfoset"/>
 
           <field id="cm:name" set="commonpropertiesset"/>
           <field id="cm:title" set="commonpropertiesset"/>

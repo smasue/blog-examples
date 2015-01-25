@@ -16,14 +16,14 @@
 
   <!-- Introduction of new namespaces defined by this model -->
   <namespaces>
-    <namespace uri="http://www.someco.ch/model/medicalservice/1.0" prefix="ms"/>
+    <namespace uri="http://www.myco.ch/model/medicalservice/1.0" prefix="ms"/>
   </namespaces>
 
   <!--		T Y P E   D E F I N I T I O N S		-->
 
   <types>
     <type name="ms:document">
-      <title>medical service document</title>
+      <title>Medical service document</title>
       <parent>cm:content</parent>
       <mandatory-aspects>
         <aspect>ms:documentType</aspect>
@@ -53,7 +53,7 @@
         <property name="ms:lastName">
           <type>d:text</type>
         </property>
-        <property name="ms:personStatus">
+        <property name="ms:status">
           <type>d:text</type>
         </property>
         <property name="ms:orgUnit">
@@ -81,15 +81,15 @@
     <aspect name="ms:documentType">
       <title>Type</title>
       <properties>
-        <property name="ms:typeCode">
+        <property name="ms:docTypeCode">
           <type>d:text</type>
           <mandatory>true</mandatory>
         </property>
-        <property name="ms:typeName">
+        <property name="ms:docTypeName">
           <type>d:text</type>
           <mandatory>true</mandatory>
         </property>
-        <property name="ms:typeDescription">
+        <property name="ms:docTypeDescription">
           <type>d:text</type>
         </property>
       </properties>

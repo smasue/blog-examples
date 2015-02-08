@@ -87,6 +87,4 @@ public class MedicalFileNameService
       logger.debug("Wrong person id format: " + token, e);
     }
   }
-  
-
 }

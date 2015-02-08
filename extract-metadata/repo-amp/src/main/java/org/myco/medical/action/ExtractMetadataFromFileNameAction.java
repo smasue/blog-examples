@@ -40,7 +40,8 @@ public class ExtractMetadataFromFileNameAction extends ActionExecuterAbstractBas
   private MedicalDocumentService medicalDocumentService;
 
   public static final String NAME = "extract-metadata-from-file-name";
-  public static final String DESCRIPTION = "Extract metadata from file name";
+  public static final String DESCRIPTION = "Extract metadata from file name following the pattern personId;" +
+                                           "documentCode;effectiveDate";
 
   /**
    * Execute the action implementation
@@ -58,11 +59,11 @@ public class ExtractMetadataFromFileNameAction extends ActionExecuterAbstractBas
         {
           public Void execute() throws Throwable
           {
-            // gets the file name from the node
+            // get file name from nodeRef
             String fileName = medicalNodeService.getName(actionedUponNodeRef);
-            // parses the file name - returns documentIdentifier
+            // parse file name and return documentIdentifier
             DocumentIdentifiers documentIdentifiers = medicalFileNameService.parseFormattedFileName(fileName);
-            // builds a complete medical document from the identifiers 
+            // build complete medical document from the identifiers - call DAOs
             MedicalDocument medicalDocument = medicalDocumentService.buildMedicalDocumentFromIdentifiers
               (documentIdentifiers);
             // makes the node a medical document

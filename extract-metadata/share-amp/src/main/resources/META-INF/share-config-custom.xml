@@ -45,6 +45,9 @@
           <show id="ms:personId"/>
           <show id="ms:firstName" for-mode="view"/>
           <show id="ms:lastName" for-mode="view"/>
+          <show id="ms:gender" for-mode="view"/>
+          <show id="ms:age" for-mode="view"/>
+          <show id="ms:jobTitle" for-mode="view"/>
           <!-- aspect effectiveDate -->
           <show id="ms:date" for-mode="view"/>
           <!-- aspect documentType -->
@@ -59,6 +62,9 @@
           <field id="ms:personId" label-id="prop.ms_personId" set="medicalinfoset"/>
           <field id="ms:firstName" label-id="prop.ms_firstName" set="medicalinfoset"/>
           <field id="ms:lastName" label-id="prop.ms_lastName" set="medicalinfoset"/>
+          <field id="ms:gender" label-id="prop.ms_gender" set="medicalinfoset"/>
+          <field id="ms:age" label-id="prop.ms_age" set="medicalinfoset"/>
+          <field id="ms:jobTitle" label-id="prop.ms_jobTitle" set="medicalinfoset"/>
           <field id="ms:date" label-id="prop.ms_date" set="medicalinfoset"/>
           <field id="ms:docTypeCode" label-id="prop.ms_docTypeCode" set="medicalinfoset"/>
           <field id="ms:docTypeName" label-id="prop.ms_docTypeName" set="medicalinfoset"/>

@@ -53,10 +53,13 @@
         <property name="ms:lastName">
           <type>d:text</type>
         </property>
-        <property name="ms:status">
+        <property name="ms:gender">
           <type>d:text</type>
         </property>
-        <property name="ms:orgUnit">
+        <property name="ms:age">
+          <type>d:int</type>
+        </property>
+        <property name="ms:jobTitle">
           <type>d:text</type>
         </property>
       </properties>

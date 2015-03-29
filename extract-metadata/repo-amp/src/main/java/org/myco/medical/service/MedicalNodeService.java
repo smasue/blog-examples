@@ -55,8 +55,9 @@ public class MedicalNodeService implements MedicalServiceModel
     aspectValues.put(QNAME_PROP_PERSON_ID, person.getId());
     aspectValues.put(QNAME_PROP_FIRST_NAME, person.getFirstName());
     aspectValues.put(QNAME_PROP_LAST_NAME, person.getLastName());
-    aspectValues.put(QNAME_PROP_STATUS, person.getStatus());
-    aspectValues.put(QNAME_PROP_ORG_UNIT, person.getOrgUnit());
+    aspectValues.put(QNAME_PROP_GENDER, person.getGender());
+    aspectValues.put(QNAME_PROP_JOB_TITLE, person.getJobTitle());
+    aspectValues.put(QNAME_PROP_AGE, person.getAge());
     nodeService.addAspect(nodeRef, QNAME_ASPECT_PERSON, aspectValues);
 
     logger.debug("Set person aspect. Node id: " + nodeRef.getId() + ", person id: " + person.getId());
@@ -161,25 +162,36 @@ public class MedicalNodeService implements MedicalServiceModel
   }
 
   /**
-   * return property ms:status of the node.
+   * return property ms:gender of the node.
    *
    * @param nodeRef ref of the node.
-   * @return status
+   * @return gender
    */
-  public String getStatus(NodeRef nodeRef)
+  public String getGender(NodeRef nodeRef)
   {
-    return (String) nodeService.getProperty(nodeRef, QNAME_PROP_STATUS);
+    return (String) nodeService.getProperty(nodeRef, QNAME_PROP_GENDER);
   }
 
   /**
-   * return property ms:orgUnit of the node.
+   * return property ms:jobTitle of the node.
    *
    * @param nodeRef ref of the node.
-   * @return orgUnit
+   * @return job title
    */
-  public String getOrgUnit(NodeRef nodeRef)
+  public String getJobTitle(NodeRef nodeRef)
   {
-    return (String) nodeService.getProperty(nodeRef, QNAME_PROP_ORG_UNIT);
+    return (String) nodeService.getProperty(nodeRef, QNAME_PROP_JOB_TITLE);
+  }
+
+  /**
+   * return property ms:age of the node.
+   *
+   * @param nodeRef ref of the node.
+   * @return age
+   */
+  public Integer getAge(NodeRef nodeRef)
+  {
+    return (Integer) nodeService.getProperty(nodeRef, QNAME_PROP_AGE);
   }
 
   /**
@@ -239,8 +251,9 @@ public class MedicalNodeService implements MedicalServiceModel
 
   /**
    * Sets cm:name property to the node.
+   *
    * @param nodeRef ref of the node.
-   * @param name name to set.
+   * @param name    name to set.
    */
   public void setName(NodeRef nodeRef, String name)
   {

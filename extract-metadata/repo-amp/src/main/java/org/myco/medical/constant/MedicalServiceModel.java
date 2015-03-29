@@ -17,8 +17,9 @@ public interface MedicalServiceModel
   public static final String PROP_PERSON_ID = "personId";
   public static final String PROP_FIRST_NAME = "firstName";
   public static final String PROP_LAST_NAME = "lastName";
-  public static final String PROP_STATUS = "status";
-  public static final String PROP_ORG_UNIT = "orgUnit";
+  public static final String PROP_GENDER = "gender";
+  public static final String PROP_AGE = "age";
+  public static final String PROP_JOB_TITLE = "jobTitle";
   public static final String PROP_DATE = "date";
   public static final String PROP_DOC_TYPE_CODE = "docTypeCode";
   public static final String PROP_DOC_TYPE_NAME = "docTypeName";
@@ -35,8 +36,9 @@ public interface MedicalServiceModel
   public static final QName QNAME_PROP_PERSON_ID = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_PERSON_ID);
   public static final QName QNAME_PROP_FIRST_NAME = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_FIRST_NAME);
   public static final QName QNAME_PROP_LAST_NAME = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_LAST_NAME);
-  public static final QName QNAME_PROP_STATUS = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_STATUS);
-  public static final QName QNAME_PROP_ORG_UNIT = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_ORG_UNIT);
+  public static final QName QNAME_PROP_GENDER = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_GENDER);
+  public static final QName QNAME_PROP_AGE = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_AGE);
+  public static final QName QNAME_PROP_JOB_TITLE = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_JOB_TITLE);
   public static final QName QNAME_PROP_DATE = QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_DATE);
   public static final QName QNAME_PROP_DOC_TYPE_CODE =
     QName.createQName(NAMESPACE_MEDICAL_MODEL_URI, PROP_DOC_TYPE_CODE);

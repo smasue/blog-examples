@@ -8,8 +8,9 @@ public class Person
   private Long id;
   private String firstName;
   private String lastName;
-  private String status; 
-  private String orgUnit;
+  private String gender; 
+  private String jobTitle;
+  private Integer age;
 
   public Long getId()
   {
@@ -41,23 +42,33 @@ public class Person
     this.lastName = lastName;
   }
 
-  public String getStatus()
+  public String getGender()
   {
-    return status;
+    return gender;
   }
 
-  public void setStatus(String status)
+  public void setGender(String gender)
   {
-    this.status = status;
+    this.gender = gender;
   }
 
-  public String getOrgUnit()
+  public String getJobTitle()
   {
-    return orgUnit;
+    return jobTitle;
   }
 
-  public void setOrgUnit(String orgUnit)
+  public void setJobTitle(String jobTitle)
   {
-    this.orgUnit = orgUnit;
+    this.jobTitle = jobTitle;
+  }
+
+  public Integer getAge()
+  {
+    return age;
+  }
+
+  public void setAge(Integer age)
+  {
+    this.age = age;
   }
 }

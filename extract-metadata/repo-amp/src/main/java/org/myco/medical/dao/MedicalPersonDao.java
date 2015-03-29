@@ -26,7 +26,8 @@ public class MedicalPersonDao
     fakePerson.setId(1234L);
     fakePerson.setFirstName("Foo");
     fakePerson.setLastName("Bar");
-    fakePerson.setStatus("STAFF");
-    fakePerson.setOrgUnit("MYCO-GS-MED");
+    fakePerson.setGender("Male");
+    fakePerson.setJobTitle("Alfresco developer");
+    fakePerson.setAge(25);
   }
 }
